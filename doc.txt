@@ -1,0 +1,12 @@
+C = Create
+R = Read
+U = Update
+D = Delete
+
+as operaçoes basicas para voepoder gerenciar o banco de dados
+
+// packge db = fazer conexão com DB
+// packge config = ler o arquivo de configuração
+// handlers = gerenciar as rotas/receber as chamadas da api
+// models = estrutura de dados e transações com o banco de dados	
+
