@@ -26,9 +26,9 @@ type DBConfig struct {
 }
 
 func init() {
-	viper.SetDefaul("api.port", "9000")
-	viper.SetDefaul("database.host", "localhost")
-	viper.SetDefaul("database.port", "5432")
+	viper.SetDefault("api.port", "9000")
+	viper.SetDefault("database.host", "localhost")
+	viper.SetDefault("database.port", "5432")
 }
 
 func Load() error {
@@ -56,4 +56,5 @@ func Load() error {
 		Database: viper.GetString("database.database"),
 	}
 
+	return nil
 }
