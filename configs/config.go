@@ -58,3 +58,11 @@ func Load() error {
 
 	return nil
 }
+
+func GetDb() DBConfig {
+	return cfg.DB
+}
+
+func GetServerPort() string {
+	return cfg.API.Port
+}
