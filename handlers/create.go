@@ -24,13 +24,13 @@ func Create(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		resp = map[string]any{
-			"error": true,
-			"msg":   fmt.Sprintf("Ocorreu um erro ao tentar inserir: %v", err),
+			"Error":   true,
+			"Message": fmt.Sprintf("Ocorreu um erro ao tentar inserir: %v", err),
 		}
 	} else {
 		resp = map[string]any{
-			"error": false,
-			"msg":   fmt.Sprintf("Todo inserido com sucesso ID: %v", id),
+			"Error":   false,
+			"Message": fmt.Sprintf("Todo inserido com sucesso ID: %v", id),
 		}
 	}
 	w.Header().Add("Content-Type", "application/json")

@@ -37,8 +37,8 @@ func Load() error {
 	viper.AddConfigPath(".")
 	err := viper.ReadInConfig()
 	if err != nil {
-		if _, ok := err.(viper.ConfigFileNotFoundError); ok {
-			return nil
+		if _, ok := err.(viper.ConfigFileNotFoundError); !ok {
+			return err
 		}
 
 	}
@@ -59,7 +59,7 @@ func Load() error {
 	return nil
 }
 
-func GetDb() DBConfig {
+func GetDB() DBConfig {
 	return cfg.DB
 }
 
